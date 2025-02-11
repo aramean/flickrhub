@@ -7,3 +7,6 @@ A lightweight and interactive photo gallery built with Vanilla JavaScript, HTML,
 | ![](https://github.com/aramean/flickrhub/blob/main/frontend/UI/src/assets/images/screenshot2.png?raw=true) | Search |
 | ![](https://github.com/aramean/flickrhub/blob/main/frontend/UI/src/assets/images/screenshot3.png?raw=true) | Modal |
 
+## API Key
+Get your own API key at
+https://www.flickr.com/services/api/
