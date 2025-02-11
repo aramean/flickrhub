@@ -1,0 +1,38 @@
+form input {
+  border: 1px solid #000735;
+  padding: 0.6rem 0.9rem 0.6rem 0.9rem;
+}
+
+form input[type=text] {
+  color: #000735;
+  background-color: rgba(0, 0, 0, .01);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  width: 325px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .2);
+}
+
+
+@media only screen and (max-width: 468px) {
+  form input[type=text] {
+    width: 225px;
+  }
+}
+
+form input[type=text]:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+form input[type=submit] {
+  cursor: pointer;
+  background-color: #000735;
+  color: #ffffff;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+form input[type=submit]:hover {
+  background-color: #000000;
+  box-shadow: -1px 2px 5px rgba(0, 0, 0, .5);
+}

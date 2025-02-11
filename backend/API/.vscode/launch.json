@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "name": "C#: API Debug",
+      "type": "dotnet",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "projectPath": "${workspaceFolder}/API.csproj",
+    }
+  ]
+}

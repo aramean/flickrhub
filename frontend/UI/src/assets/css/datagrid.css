@@ -1,0 +1,7 @@
+#datagrid {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(8, 14vw);
+  grid-gap: 5px;
+  overflow: auto;
+}
