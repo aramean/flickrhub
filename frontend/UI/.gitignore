@@ -1,2 +1,13 @@
+.DS_Store
+.Trashes
+*.swp
+
+pids
+*.pid
+*.seed
+
+logs
+*.log
+npm-debug.log*
 dist
 node_modules
