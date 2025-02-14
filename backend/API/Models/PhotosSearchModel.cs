@@ -5,7 +5,7 @@ namespace API.Models;
 public class PhotosSearchModel()
 {
     [JsonPropertyName("photos")]
-    public Photos? Photos { get; init; }
+    public Photos? Photos { get; init; } = new();
 
     [JsonPropertyName("stat")]
     public string? Status { get; init; }
@@ -21,7 +21,7 @@ public class PhotosSearchModel()
 public class Photos()
 {
     [JsonPropertyName("photo")]
-    public List<Photo>? Photo { get; init; }
+    public List<Photo>? Photo { get; init; } = [];
 
     [JsonPropertyName("page")]
     public int Page { get; init; } = 1;
