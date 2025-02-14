@@ -26,7 +26,6 @@ figure img {
 
 figure img:hover {
   filter: brightness(1.25);
-  border: inset 1px solid #000000;
   cursor: pointer;
 }
 
