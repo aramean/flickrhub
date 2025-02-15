@@ -9,6 +9,11 @@ This project is a backend service built with C# and .NET (9).
 
 ### Development
 Start and work on the service in the development environment.
+
+#### Set API key with user secrets
+```
+dotnet user-secrets set "ApiKey" "541bf49a73d4cf4455660c6431d4d6b8"
+```
 #### Run service
 ```
 dotnet run --environment Development
@@ -39,6 +44,10 @@ dotnet publish --configuration Release --output ./publish
 ```
 dotnet run --environment Production
 ```
+#### Pass API key environment variable
+```
+FLICKR_API_KEY="your-api-key" dotnet run --environment Production
+```
 
 ## Installed NuGet packages
 ```
@@ -46,11 +55,6 @@ dotnet add package Microsoft.AspNetCore.OpenApi
 ```
 ```
 dotnet add package Scalar.AspNetCore
-```
-
-## Set API key with user secrets
-```
-dotnet user-secrets set "ApiKey" "541bf49a73d4cf4455660c6431d4d6b8"
 ```
 
 ## Notes
