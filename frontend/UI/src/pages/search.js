@@ -84,9 +84,10 @@ export async function initSearchPage() {
     // Trigger when near the bottom and stop when there is no photos
     if ((!isLoading && !maxLoaded) && ((offsetHeight + offsetHeight) + scrollTop) >= scrollHeight) {
       try {
+        showSpinner({ place: 'bottom' });
         console.debug('Current Page: ' + nextPage);
-
         isLoading = true;
+
         const data = await fetchSearchPhotos(textSearch, nextPage);
         const total = data?.photos?.photo?.length;
         const stat = data?.stat;
@@ -101,6 +102,7 @@ export async function initSearchPage() {
         console.error(error.message);
       } finally {
         isLoading = false;
+        hideSpinner();
       }
     }
   });
