@@ -6,10 +6,10 @@ namespace API.Services;
 public class FlickrService(HttpClient httpClient, IConfiguration configuration)
 {
   private readonly HttpClient _httpClient = httpClient;
-    private readonly string _baseUrl = configuration["FlickrApi:BaseUrl"] 
+    private readonly string _baseUrl = configuration["FlickrApi:BaseUrl"]
         ?? throw new Exception("FlickrApi:BaseUrl is missing in configuration.");
-    private readonly string _apiKey = configuration["ApiKey"] 
-        ?? throw new Exception("API key is missing in configuration.");
+    private readonly string _apiKey = Environment.GetEnvironmentVariable("FLICKR_API_KEY") ?? configuration["ApiKey"]
+        ?? throw new Exception("API key is missing.");
 
     private string CommonParameters => $"&api_key={_apiKey}&format=json&nojsoncallback=1";
 
