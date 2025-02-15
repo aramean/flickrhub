@@ -24,15 +24,17 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
 
 var app = builder.Build();
 
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
+    // Load user secrets
+    builder.Configuration.AddUserSecrets<Program>();
+    app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 else
 {
-    app.MapOpenApi();
-    app.MapScalarApiReference();
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
 
 // Redirect HTTP to HTTPS

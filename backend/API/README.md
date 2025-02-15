@@ -48,6 +48,11 @@ dotnet add package Microsoft.AspNetCore.OpenApi
 dotnet add package Scalar.AspNetCore
 ```
 
+## Set API key with user secrets
+```
+dotnet user-secrets set "ApiKey" "541bf49a73d4cf4455660c6431d4d6b8"
+```
+
 ## Notes
  - API credentials are stored as variables in ```FlickService.cs``` and should be moved to environment variables.
  - AddCors is configured in in ```Program.cs``` to allow all origins (security risk).
