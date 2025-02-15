@@ -6,6 +6,5 @@ export const routes = {
   search: { page: searchPage, init: initSearchPage },
 };
 
-// TODO: Make it dynamic through environment variable.
-// Comment out below to activate debug.
+// Disable debug.
 //console.debug = function () { };
