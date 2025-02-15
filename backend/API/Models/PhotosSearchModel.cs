@@ -8,7 +8,7 @@ public class PhotosSearchModel()
     public Photos Photos { get; init; } = new();
 
     [JsonPropertyName("stat")]
-    public string? Status { get; init; }
+    public string Status { get; init; } = "error";
 
     [JsonPropertyName("code")]
     public int Code { get; init; } = 200;
@@ -36,14 +36,14 @@ public class Photos()
 public class Photo()
 {
     [JsonPropertyName("id")]
-    public string? Id { get; init; }
+    public string Id { get; init; } = string.Empty;
 
     [JsonPropertyName("title")]
-    public string? Title { get; init; }
+    public string Title { get; init; } = string.Empty;
 
     [JsonPropertyName("secret")]
-    public string? Secret { get; init; }
+    public string Secret { get; init; } = string.Empty;
 
     [JsonPropertyName("server")]
-    public string? Server { get; init; }
+    public string Server { get; init; } = string.Empty;
 }
